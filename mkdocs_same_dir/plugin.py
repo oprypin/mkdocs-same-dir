@@ -19,7 +19,12 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
             if _is_path_under(base=config["site_dir"], path=f.abs_src_path):
                 continue
             # Exclude non-document pages in the root of docs_dir.
-            if len(pathlib.Path(f.src_path).parts) > 1 or f.is_documentation_page():
+            if (
+                len(pathlib.Path(f.src_path).parts) > 1
+                or f.is_documentation_page()
+                or f.is_javascript()
+                or f.is_css()
+            ):
                 result.append(f)
 
         return mkdocs.structure.files.Files(result)
