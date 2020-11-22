@@ -1,0 +1,1 @@
+Also works for subdirectories

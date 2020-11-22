@@ -1,0 +1,7 @@
+site_name: mkdocs-same-dir
+docs_dir: .
+site_dir: ../site
+
+plugins:
+  - search
+  - same-dir
