@@ -19,7 +19,7 @@ Activate the plugin in **mkdocs.yml**, along with actually changing `docs_dir`
 (normally, MkDocs *absolutely wouldn't* let you set it to `.`):
 
 ```yaml
-site_name: mkdocs-same-dir
+site_name: foo
 docs_dir: .
 site_dir: ../site
 
@@ -31,3 +31,9 @@ plugins:
 and now you can move this **mkdocs.yml** into your **docs** directory, or move your docs alongside **mkdocs.yml**.
 
 [**See example layout**](https://github.com/oprypin/mkdocs-same-dir/tree/master/example)
+
+### Important notes
+
+Another necessary effect of this plugin is that files *directly at the root* of the **docs** dir will no longer be picked up, unless they are Markdown files.
+
+And note that the [implementation](https://github.com/oprypin/mkdocs-same-dir/blob/master/mkdocs_same_dir/plugin.py) of this plugin is a huge hack that monkeypatches MkDocs' internals. But I pledge to keep up with MkDocs updates and keep it working as long as that's still possible.

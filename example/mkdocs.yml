@@ -1,4 +1,4 @@
-site_name: mkdocs-same-dir
+site_name: foo
 docs_dir: .
 site_dir: ../site
 
