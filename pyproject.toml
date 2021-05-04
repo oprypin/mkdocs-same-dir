@@ -12,7 +12,7 @@ same-dir = "mkdocs_same_dir.plugin:SameDirPlugin"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-mkdocs = "^1.0"
+mkdocs = "^1.0.3"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
