@@ -11,5 +11,6 @@ with_groups() {
 "$@" autoflake -i -r --remove-all-unused-imports --remove-unused-variables mkdocs_same_dir
 "$@" isort -q mkdocs_same_dir
 "$@" black -q mkdocs_same_dir
+
 "$@" mkdocs build -f example/mkdocs.yml -q --strict
 "$@" grep -q adjacent site/index.html

@@ -17,7 +17,7 @@ jobs:
             os: macos-latest
           - python: 3.8
             os: ubuntu-latest
-          - python: 3.6
+          - python: 3.7
             os: windows-latest
           - python: 3.6
             os: ubuntu-latest
@@ -27,7 +27,6 @@ jobs:
       - name: Download source
         uses: actions/checkout@v2
       - name: Install Python
-        id: python
         uses: actions/setup-python@v2
         with:
           python-version: ${{matrix.python}}

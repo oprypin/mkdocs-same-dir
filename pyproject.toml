@@ -1,11 +1,12 @@
 [tool.poetry]
 name = "mkdocs-same-dir"
 version = "0.1.0"
-description = "MkDocs plugin to allow placing mkdocs.yml to the same directory as documentation"
+description = "MkDocs plugin to allow placing mkdocs.yml in the same directory as documentation"
 authors = ["Oleh Prypin <oleh@pryp.in>"]
 license = "MIT"
 repository = "https://github.com/oprypin/mkdocs-same-dir"
 keywords = ["mkdocs", "mkdocs-plugin"]
+readme = "README.md"
 
 [tool.poetry.plugins."mkdocs.plugins"]
 same-dir = "mkdocs_same_dir.plugin:SameDirPlugin"

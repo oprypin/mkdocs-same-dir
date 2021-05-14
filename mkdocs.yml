@@ -1,4 +1,4 @@
-site_name: MkDocs Plugins
+site_name: "mkdocs-same-dir"
 site_url: "https://oprypin.github.io/mkdocs-same-dir"
 repo_url: "https://github.com/oprypin/mkdocs-same-dir"
 edit_uri: blob/master/docs/
