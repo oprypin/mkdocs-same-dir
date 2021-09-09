@@ -24,7 +24,7 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
                 or f.is_documentation_page()
                 or f.is_javascript()
                 or f.is_css()
-                or f.name == 'CNAME'
+                or f.name == "CNAME"
             ):
                 result.append(f)
 
