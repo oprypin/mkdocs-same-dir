@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mkdocs-same-dir"
-version = "0.1.0"
+version = "0.1.1"
 description = "MkDocs plugin to allow placing mkdocs.yml in the same directory as documentation"
 authors = ["Oleh Prypin <oleh@pryp.in>"]
 license = "MIT"
