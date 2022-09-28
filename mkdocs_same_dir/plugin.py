@@ -11,6 +11,10 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
         # HACK: Before the code has a chance to kick in, remove the validation of directory paths,
         # so mkdocs doesn't refuse to process docs alongside mkdocs.yml.
         mkdocs.config.config_options.Dir.post_validation = _replace_validation
+        try:
+            mkdocs.config.config_options.DocsDir.post_validation = _replace_validation
+        except AttributeError:
+            pass
 
     def on_files(self, files, config):
         result = []

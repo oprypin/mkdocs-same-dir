@@ -12,5 +12,5 @@ with_groups() {
 "$@" isort -q mkdocs_same_dir
 "$@" black -q mkdocs_same_dir
 
-"$@" mkdocs build -f example/mkdocs.yml -q --strict
+(cd example && "$@" mkdocs build -q --strict)
 "$@" grep -q adjacent site/index.html
