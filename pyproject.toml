@@ -12,7 +12,7 @@ readme = "README.md"
 same-dir = "mkdocs_same_dir.plugin:SameDirPlugin"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
 mkdocs = "^1.0.3"
 
 [tool.poetry.dev-dependencies]
