@@ -51,7 +51,7 @@ include = ["/mkdocs_same_dir"]
 
 [tool.hatch.envs.default.scripts]
 all = [
-    "hatch run style:format",
+    "hatch run style:fix",
     "hatch run types:check",
     "hatch run test:test",
 ]
@@ -73,15 +73,16 @@ check = [
 [tool.hatch.envs.style]
 skip-install = true
 dependencies = [
-    "pyupgrade",
-    "autoflake",
+    "ruff",
     "isort",
     "black",
 ]
 [tool.hatch.envs.style.scripts]
+fix = [
+    "ruff check --fix mkdocs_same_dir",
+    "format",
+]
 format = [
-    "find mkdocs_same_dir -name '*.py' | xargs pyupgrade --exit-zero-even-if-changed --py37-plus",
-    "autoflake -r mkdocs_same_dir",
     "isort -q mkdocs_same_dir",
     "black -q mkdocs_same_dir",
 ]
@@ -101,11 +102,20 @@ line-length = 100
 profile = "black"
 line_length = 100
 
-[tool.autoflake]
-in-place = true
-remove-all-unused-imports = true
-remove-unused-variables = true
-expand-star-imports = true
+[tool.ruff]
+select = [
+    "F", "W", "E", "UP", "YTT", "C4", "FA", "PIE", "T20", "RSE", "TCH", "DTZ",
+    "B002", "B003", "B005", "B007", "B009", "B012", "B013", "B014", "B015", "B018", "B020", "B021", "B023", "B026", "B033", "B034", "B905",
+    "COM818",
+    "PERF101",
+    "PGH002", "PGH004", "PGH005",
+    "PLE", "PLW0120", "PLW0127",
+    "RUF001", "RUF007", "RUF010", "RUF100", "RUF200",
+    "SIM101", "SIM107", "SIM201", "SIM202", "SIM208", "SIM210", "SIM211", "SIM300", "SIM401", "SIM910",
+]
+ignore = ["E501", "E731"]
+[tool.ruff.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
 
 [tool.mypy]
 ignore_missing_imports = true
