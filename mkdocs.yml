@@ -7,6 +7,7 @@ use_directory_urls: false
 theme:
   name: material
   features:
+    - content.action.edit
     - navigation.tabs
     - toc.integrate
   icon:
@@ -27,8 +28,17 @@ markdown_extensions:
   - toc:
       permalink: "#"
 
+validation:
+  omitted_files: warn
+  unrecognized_links: warn
+  absolute_links: warn
+  nav:
+    absolute_links: ignore
+
 nav:
   - section-index: /mkdocs-section-index/
   - literate-nav: /mkdocs-literate-nav/
   - gen-files: /mkdocs-gen-files/
   - same-dir: README.md
+  - code-validator: /mkdocs-code-validator/
+  - callouts: /markdown-callouts/
