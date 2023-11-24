@@ -49,6 +49,12 @@ path = "mkdocs_same_dir/__init__.py"
 [tool.hatch.build.targets.sdist]
 include = ["/mkdocs_same_dir"]
 
+[tool.hatch.env]
+requires = [
+    "hatch-mkdocs",
+    "hatch-pip-compile",
+]
+
 [tool.hatch.envs.default.scripts]
 all = [
     "hatch run style:fix",
@@ -84,13 +90,10 @@ format = [
     "ruff format -q mkdocs_same_dir",
 ]
 
+[tool.hatch.env.collectors.mkdocs.docs]
 [tool.hatch.envs.docs]
-detached = true
-dependencies = [
-    "mkdocs >=1.5",
-    "mkdocs-material >=7.1.4",
-    "pymdown-extensions >=8.2",
-]
+type = "pip-compile"
+pip-compile-hashes = false
 
 [tool.ruff]
 line-length = 100
