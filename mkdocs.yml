@@ -1,4 +1,5 @@
 site_name: "mkdocs-same-dir"
+site_description: "MkDocs plugin to allow placing mkdocs.yml in the same directory as documentation"
 site_url: "https://oprypin.github.io/mkdocs-same-dir"
 repo_url: "https://github.com/oprypin/mkdocs-same-dir"
 edit_uri: blob/master/docs/
@@ -17,12 +18,15 @@ theme:
     accent: purple
 
 markdown_extensions:
+  - pymdownx.details
   - pymdownx.highlight
   - pymdownx.magiclink
+  - pymdownx.saneheaders
   - pymdownx.superfences
-  - pymdownx.details
   - pymdownx.snippets:
       check_paths: true
+      base_path:
+        - !relative $config_dir
   - admonition
   - def_list
   - toc:

@@ -3,7 +3,7 @@
 **[Plugin][] for [MkDocs][] to allow placing *mkdocs.yml* in the same directory as documentation**
 
 [![PyPI](https://img.shields.io/pypi/v/mkdocs-same-dir)](https://pypi.org/project/mkdocs-same-dir/)
-[![GitHub](https://img.shields.io/github/license/oprypin/mkdocs-same-dir)](https://github.com/oprypin/mkdocs-same-dir/blob/master/LICENSE.md)
+[![License](https://img.shields.io/github/license/oprypin/mkdocs-same-dir)](https://github.com/oprypin/mkdocs-same-dir/blob/master/LICENSE.md)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/oprypin/mkdocs-same-dir/ci.yml.svg)](https://github.com/oprypin/mkdocs-same-dir/actions?query=event%3Apush+branch%3Amaster)
 
 ```shell
