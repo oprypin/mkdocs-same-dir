@@ -36,7 +36,8 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
 
 def _replace_validation(self, config, *args, **kwargs):
     # HACK: Also make so it doesn't realize we're using a subdirectory for the site dir and such.
-    config["docs_dir"] = os.path.join(config["docs_dir"], ".")
+    if "docs_dir" in config:
+        config["docs_dir"] = os.path.join(config["docs_dir"], ".")
 
 
 def _is_path_under(base, path):
