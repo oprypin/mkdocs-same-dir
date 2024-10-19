@@ -15,7 +15,8 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
         with contextlib.suppress(AttributeError):
             mkdocs.config.config_options.DocsDir.post_validation = _replace_validation
 
-    def on_files(self, files, config):
+    @classmethod
+    def on_files(cls, files, config):
         result = []
         for f in files:
             # Exclude everything under site_dir.
