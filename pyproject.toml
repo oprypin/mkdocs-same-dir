@@ -35,7 +35,7 @@ dependencies = [
     "mkdocs >=1.2",
     #min "jinja2 >=2.10.2",
     #min "markupsafe >=2.0.1",
-    #min "Markdown >=3.2.1",
+    #min "Markdown >=3.2.2",
 ]
 
 [project.urls]
