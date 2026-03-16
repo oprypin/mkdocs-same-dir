@@ -5,6 +5,15 @@ import pathlib
 import mkdocs.config.config_options
 import mkdocs.plugins
 import mkdocs.structure.files
+import properdocs.replacement_warning
+
+try:
+    import properdocs.replacement_warning
+
+    # Warn when this plugin is being used from the mkdocs executable.
+    properdocs.replacement_warning.setup()
+except ImportError:
+    pass
 
 
 class SameDirPlugin(mkdocs.plugins.BasePlugin):
