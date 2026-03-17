@@ -19,18 +19,18 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     # Begin Python versions
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     # End Python versions
     "Topic :: Documentation",
     "Topic :: Software Development :: Documentation",
     "Typing :: Typed",
 ]
 dynamic = ["version"]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "mkdocs >=1.2, <=1.6.1",
     "properdocs >=1.6.5",
@@ -55,7 +55,7 @@ include = ["/mkdocs_same_dir"]
 
 [tool.hatch.env]
 requires = [
-    "hatch-mkdocs",
+    "hatch-properdocs",
     "hatch-pip-compile >=1.7.0",
 ]
 
@@ -92,7 +92,7 @@ fix = [
     "format",
 ]
 
-[tool.hatch.env.collectors.mkdocs.docs]
+[tool.hatch.env.collectors.properdocs.docs]
 [tool.hatch.envs.docs]
 type = "pip-compile"
 

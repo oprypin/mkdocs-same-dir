@@ -1,10 +1,10 @@
-_commit: 1c7686408
+_commit: b65bb534c
 _src_path: gh:oprypin/py-project-template
 copyright_date: '2020'
-mkdocs: true
-mkdocs_install_self: false
 project_description: MkDocs plugin to allow placing mkdocs.yml in the same directory as documentation
 project_name: mkdocs-same-dir
+properdocs: true
+properdocs_install_self: false
 pytest: false
 python_distribution_name: mkdocs-same-dir
 python_source_path: mkdocs_same_dir
