@@ -5,7 +5,6 @@ import pathlib
 import mkdocs.config.config_options
 import mkdocs.plugins
 import mkdocs.structure.files
-import properdocs.replacement_warning
 
 try:
     import properdocs.replacement_warning
