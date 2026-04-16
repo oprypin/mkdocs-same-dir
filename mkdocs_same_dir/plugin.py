@@ -28,11 +28,8 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
     def on_files(cls, files, config):
         result = []
         for f in files:
-            # Exclude dynamically written files
-            if f.src_dir is None:
-                continue
             # Exclude everything under site_dir.
-            if _is_path_under(base=config["site_dir"], path=f.abs_src_path):
+            if f.src_dir and  _is_path_under(base=config["site_dir"], path=f.abs_src_path):
                 continue
             # Exclude non-document pages in the root of docs_dir.
             if (
