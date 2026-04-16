@@ -52,6 +52,7 @@ def _replace_validation(self, config, *args, **kwargs):
 def _is_path_under(base, path):
     try:
         pathlib.Path(path).relative_to(base)
-        return True
     except ValueError:
         return False
+    else:
+        return True
