@@ -18,7 +18,7 @@ except ImportError:
 class SameDirPlugin(mkdocs.plugins.BasePlugin):
     def __init__(self):
         # HACK: Before the code has a chance to kick in, remove the validation of directory paths,
-        # so mkdocs doesn't refuse to process docs alongside mkdocs.yml.
+        # so ProperDocs doesn't refuse to process docs alongside properdocs.yml.
         mkdocs.config.config_options.Dir.post_validation = _replace_validation
         with contextlib.suppress(AttributeError):
             mkdocs.config.config_options.DocsDir.post_validation = _replace_validation

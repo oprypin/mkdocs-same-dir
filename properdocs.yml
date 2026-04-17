@@ -1,5 +1,5 @@
 site_name: "mkdocs-same-dir"
-site_description: "MkDocs plugin to allow placing mkdocs.yml in the same directory as documentation"
+site_description: "ProperDocs plugin to allow placing properdocs.yml in the same directory as documentation"
 site_url: "https://oprypin.github.io/mkdocs-same-dir"
 repo_url: "https://github.com/oprypin/mkdocs-same-dir"
 edit_uri: blob/master/docs/
