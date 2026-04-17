@@ -4,10 +4,10 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mkdocs-same-dir"
-description = "MkDocs plugin to allow placing mkdocs.yml in the same directory as documentation"
+description = "ProperDocs plugin to allow placing properdocs.yml in the same directory as documentation"
 readme = "README.md"
 license = "MIT"
-keywords = ["mkdocs", "mkdocs-plugin"]
+keywords = ["properdocs", "mkdocs", "mkdocs-plugin"]
 authors = [
     {name = "Oleh Prypin", email = "oleh@pryp.in"},
 ]
@@ -66,6 +66,10 @@ all = [
     "hatch run test:test",
 ]
 
+[tool.hatch.envs.test]
+dependencies = [
+    "properdocs-theme-mkdocs",
+]
 [tool.hatch.envs.test.scripts]
 test = [
     "bash .tools/test.sh {args}",
