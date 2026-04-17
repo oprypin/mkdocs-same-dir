@@ -28,7 +28,7 @@ class SameDirPlugin(mkdocs.plugins.BasePlugin):
         result = []
         for f in files:
             # Exclude everything under site_dir.
-            if _is_path_under(base=config["site_dir"], path=f.abs_src_path):
+            if f.src_dir and _is_path_under(base=config["site_dir"], path=f.abs_src_path):
                 continue
             # Exclude non-document pages in the root of docs_dir.
             if (
